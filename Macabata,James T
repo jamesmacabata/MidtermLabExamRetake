@@ -78,7 +78,7 @@ bool _isDrawerOpening() {
 // Define a private method _isDrawerClosed that checks if the drawer is closed
 bool _isDrawerClosed() {
   // 14. Return true if the value of _drawerSlideController is 0.0, indicating the drawer is closed
-  return _drawerSlideController.value == true;
+  return _drawerSlideController.value == 0.0;
 }
 
 // Define a private method _toggleDrawer that toggles the drawer open or closed
