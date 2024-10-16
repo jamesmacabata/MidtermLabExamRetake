@@ -41,7 +41,7 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
 
   // 10. Override the initState method, which is called when the widget is inserted into the tree
   @override
-  void main () {
+  void initState () {
     // Call the superclass's initState method
     super.initState();
 
@@ -385,20 +385,20 @@ List<Widget> _buildListItems() {
             _itemSlideIntervals[i].transform(_staggeredController.value),
           );
           //33.  Calculate the opacity
-          final opacity  = animationPercent;
+          final opacity = animationPercent;
           // Calculate the slide distance
           final slideDistance = (1.0 - animationPercent) * 150;
 
           // 34.Return an Opacity widget
           return Opacity(
             // 35. Set the opacity of the Opacity widget
-            opacity: 0,
+            opacity: opacity,
             // 36. Set the child of the Opacity widget to a Transform widget
             child: Transform.translate(
               // Set the offset of the Transform widget
               offset: Offset(slideDistance, 0),
               // 37. Set the child of the Transform widget
-              child: widget,
+              child: child,
             ),
           );
         },
