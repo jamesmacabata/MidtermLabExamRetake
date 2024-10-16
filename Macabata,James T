@@ -244,7 +244,7 @@ class _MenuState extends State<Menu> with SingleTickerProviderStateMixin {
 
   // 18. Override the initState method from the parent class
 @override
-void _____________() {
+void initState() {
   // Call the parent class's initState method
   super.initState();
 
@@ -385,7 +385,7 @@ List<Widget> _buildListItems() {
             _itemSlideIntervals[i].transform(_staggeredController.value),
           );
           //33.  Calculate the opacity
-          final ________ = animationPercent;
+          final opacity  = animationPercent;
           // Calculate the slide distance
           final slideDistance = (1.0 - animationPercent) * 150;
 
